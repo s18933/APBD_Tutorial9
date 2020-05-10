@@ -271,7 +271,7 @@ namespace LinqConsoleApp
         /// </summary>
         public void Task9()
         {
-            var res = Emps.Where(emp => emp.Job == "Frontend programmer").Take(1).ToList();
+            var res = Emps.Where(emp => emp.Job == "Frontend programmer").OrderByDescending(emp => emp.HireDate).Take(1).ToList();
         }
 
         /// <summary>
